@@ -44,6 +44,10 @@ public class CodPos implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "cp")
     @JsonBackReference
     private List<ClienteDireccion> clienteDireccionList;
+    
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cp")
+    @JsonBackReference
+    private List<EmpleadoDireccion> empleadoDireccionList;
 
     public CodPos() {
     }
